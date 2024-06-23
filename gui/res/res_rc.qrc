@@ -1,0 +1,14 @@
+<RCC>
+  <qresource prefix="Icons">
+    <file>20230224130920!DnD_5e_logo.png</file>
+    <file>computer-security-shield.png</file>
+    <file>DnD-Emblem.png</file>
+    <file>kindpng_3268817.png</file>
+    <file>like.png</file>
+    <file>pause.png</file>
+    <file>play-buttton.png</file>
+    <file>plus.png</file>
+    <file>res.qrc</file>
+    <file>Screenshot 2024-05-17 211610.png</file>
+  </qresource>
+</RCC>
