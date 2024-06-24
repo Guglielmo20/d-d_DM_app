@@ -1,0 +1,98 @@
+{
+    "Artificier": {
+        "subclass": [
+            "Alchemist",
+            "Armorer",
+            "Artillerist",
+            "Battle Smith"
+        ]
+    },
+    "Barbarian": {
+        "subclass": [
+            "Path of the Berseker",
+            "Path of the Totem Warrior"
+        ]
+    },
+    "Bard": {
+        "subclass": [
+            "College of Lore",
+            "College of Valor"
+        ]
+    },
+    "Cleric": {
+        "subclass": [
+            "Knowledge Domain",
+            "Life Domain",
+            "Light Domain",
+            "Nature Domain",
+            "Tempest Domain",
+            "Trickery Domain",
+            "War Domain"
+        ]
+    },
+    "Druid": {
+        "subclass": [
+            "Circle of the Land",
+            "Circle of the Moon"
+        ]
+    },
+    "Fighter": {
+        "subclass": [
+            "Champion",
+            "Battle Master",
+            "Eldritch Knight"
+        ]
+    },
+    "Monk": {
+        "subclass": [
+            "Way of the Open Hand",
+            "Way of Shadow",
+            "Way of the Four Elements"
+        ]
+    },
+    "Paladin": {
+        "subclass": [
+            "Oath of Devotion",
+            "Oath of the Ancients",
+            "Oath of Vengeance"
+        ]
+    },
+    "Ranger": {
+        "subclass": [
+            "Hunter",
+            "Beast Master"
+        ]
+    },
+    "Rogue": {
+        "subclass": [
+            "Thief",
+            "Assassin",
+            "Arcane Trickster"
+        ]
+    },
+    "Sorcerer": {
+        "subclass": [
+            "Draconic Bloodline",
+            "Wild Magic"
+        ]
+    },
+    "Warlock": {
+        "subclass": [
+            "The Archfey",
+            "The Fiend",
+            "The Great Old One"
+        ]
+    },
+    "Wizard": {
+        "subclass": [
+            "School of Abjuration",
+            "School of Conjuration",
+            "School of Divination",
+            "School of Enchantment",
+            "School of Evocation",
+            "School of Illusion",
+            "School of Necromancy",
+            "School of Transmutation"
+        ]
+    }
+}

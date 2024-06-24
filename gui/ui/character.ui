@@ -448,33 +448,7 @@
            </widget>
           </item>
           <item row="4" column="2">
-           <widget class="QComboBox" name="class0">
-            <item>
-             <property name="text">
-              <string>Artefice</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>New Item</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Chierico</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Mago</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Stregone</string>
-             </property>
-            </item>
-           </widget>
+           <widget class="QComboBox" name="class0"/>
           </item>
           <item row="7" column="0" colspan="2">
            <widget class="QLabel" name="label_strenght">

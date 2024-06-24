@@ -1,0 +1,42 @@
+{
+    "Dwarf": {
+        "subrace": [
+            "Hill-Dwarf",
+            "Mountain-Dwarf"
+        ]
+    },
+    "Elf": {
+        "subrace": [
+            "High-Elf",
+            "Wood-Elf",
+            "Dark-Elf"
+        ]
+    },
+    "Halfling": {
+        "subrace": [
+            "Lightfoot-Halfling",
+            "Stout-Halfling"
+        ]
+    },
+    "Human": {
+        "subrace": "-"
+    },
+    "Dragonborn": {
+        "subrace": "-"
+    },
+    "Gnome": {
+        "subrace": [
+            "Rock-Gnome",
+            "Forest-Gnome"
+        ]
+    },
+    "Half-Elf": {
+        "subrace": "-"
+    },
+    "Half-Orc": {
+        "subrace": "-"
+    },
+    "Tiefling": {
+        "subrace": "-"
+    }
+}
