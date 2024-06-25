@@ -441,7 +441,7 @@ border-color: rgb(255, 170, 0);</string>
          <property name="currentIndex">
           <number>0</number>
          </property>
-         <widget class="QWidget" name="tab">
+         <widget class="QWidget" name="tab_characters">
           <property name="styleSheet">
            <string notr="true"/>
           </property>
@@ -489,57 +489,13 @@ border-color: rgb(255, 170, 0);</string>
             </spacer>
            </item>
            <item row="0" column="1" colspan="2">
-            <widget class="QListWidget" name="listWidget">
-             <item>
-              <property name="text">
-               <string>--- PROPRIO LORO ---</string>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>10</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Donatello San</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Guglielmo</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Krogl da Burdhal</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Nevio lo Stirato</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Proprio Lui</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Xelarius</string>
-              </property>
-             </item>
-            </widget>
+            <widget class="QListWidget" name="listCharacter"/>
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="tab_2">
+         <widget class="QWidget" name="tab_creatures">
           <property name="styleSheet">
-           <string notr="true">
-</string>
+           <string notr="true"/>
           </property>
           <attribute name="title">
            <string>Creature</string>
@@ -589,7 +545,7 @@ border-color: rgb(255, 170, 0);</string>
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="tab_3">
+         <widget class="QWidget" name="tab_createnew">
           <attribute name="title">
            <string>Crea Nuovo</string>
           </attribute>
@@ -651,7 +607,7 @@ border-color: rgb(255, 170, 0);</string>
      <x>0</x>
      <y>0</y>
      <width>1260</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">

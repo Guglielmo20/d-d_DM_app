@@ -1,11 +1,12 @@
 from PyQt5 import QtGui
-from PyQt5.QtWidgets import QDialog, QComboBox
+from PyQt5.QtWidgets import QDialog, QComboBox, QLabel, QLineEdit, QMessageBox
 from gui.py import character
 import os
 import json
+from pprint import pprint
 
 class Character(QDialog):
-    def __init__(self, res_class, res_race):
+    def __init__(self, res_class, res_race, db_character):
         super().__init__()
         self.ui = character.Ui_Dialog()
         self.ui.setupUi(self)
@@ -13,14 +14,14 @@ class Character(QDialog):
         # Initialization
         self.class_db = res_class
         self.races_db = res_race
-        self.ui.race.addItems(self.races_db.keys())
         self.ui.class0.addItems(self.class_db.keys())
+        self.ui.race.addItems(self.races_db.keys())
+        self.class_filter()
+        self.race_filter()
+
         self.save = False
+        self.db_characters = db_character
 
-        self.db_characters = {}
-
-
-    
         # Filtering Class / Race
         self.ui.race.currentTextChanged.connect(self.race_filter)
         self.ui.class0.currentTextChanged.connect(self.class_filter)
@@ -32,7 +33,13 @@ class Character(QDialog):
 
     def character_save(self):
         """Save the data when Save is clicked and close the window."""
-        self.db_characters = self.copy_data()
+        new_char = self.copy_data()
+        if list(new_char)[0] not in list(self.db_characters):
+            self.db_characters.update(new_char)
+        else:
+            self.show_error_message(f"Value '{list(new_char)[0]}' already exists!")
+        with open(os.path.join(os.getcwd(), "./res/db_characters.json"), "w") as outfile:
+            json.dump(self.db_characters, outfile, indent=4)
         self.save = True
         self.close()
 
@@ -57,19 +64,37 @@ class Character(QDialog):
         self.ui.subclass.clear()
         self.ui.subclass.addItems(self.class_db[selected_class]['subclass'])
 
-    def copy_data(self):
-        saved = {}
-        list_save = ['group', 'subgroup', 'name', 'level', 
-                     'race', 'subrace', 'class0', 'subclass',
-                     'maxhp', 'maxhp_2', 'armorerclass', 'velocity',
-                     'strenght', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma']
-        
+    def copy_data(self):        
+        values = {}
 
-        all_objects = self.findChildren(QDialog)
-        print(all_objects)
-        # Print all child widgets
-        for obj in all_objects:
-            print(obj)
+        # Save QLabel values
+        # labels = self.findChildren(QLabel)
+        # for label in labels:
+        #     values[label.objectName()] = label.text()
+
+        # Save QComboBox values
+        comboboxes = self.findChildren(QComboBox)
+        for combobox in comboboxes:
+            values[combobox.objectName()] = combobox.currentText()
+
+        # Save QLine values
+        lines = self.findChildren(QLineEdit)
+        for line in lines:
+            values[line.objectName()] = line.text()
+            if line.objectName() == 'name':
+                name = line.text()
+
+        new_char = {name: values}
+        return new_char
+    
+
+    def show_error_message(self, message):
+        error_dialog = QMessageBox()
+        error_dialog.setIcon(QMessageBox.Critical)
+        error_dialog.setText(message)
+        error_dialog.setWindowTitle("Error")
+        error_dialog.exec_()
+        
 
 
 

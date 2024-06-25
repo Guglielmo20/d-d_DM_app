@@ -17,17 +17,24 @@ class Login(QMainWindow):
 
         # Instance and launch of main window
         self.main_window = main_window_class.MainWindow(self.res_dict)
-        self.ui.pushButton_3.clicked.connect(self.main_window.show)
+        self.ui.pushButton_3.clicked.connect(self.launch_application)
 
+    def launch_application(self):
+        self.main_window.show()
+        self.close()
 
     def load_resources(self):
         with open(os.path.abspath(os.path.join(os.getcwd(), './res/races_subraces.json'))) as f:
-            self.races_db = json.load(f)
+            races_db = json.load(f)
         
         with open(os.path.abspath(os.path.join(os.getcwd(), './res/classes_subclasses.json'))) as f:
-            self.class_db = json.load(f)
+            class_db = json.load(f)
 
-        self.res_dict = {'classes': self.class_db,
-                         'races': self.races_db}
+        with open(os.path.abspath(os.path.join(os.getcwd(), './res/db_characters.json'))) as f:
+            db_characters = json.load(f)
+
+        self.res_dict = {'classes': class_db,
+                         'races': races_db,
+                         'characters': db_characters}
 
 
