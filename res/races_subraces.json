@@ -19,10 +19,14 @@
         ]
     },
     "Human": {
-        "subrace": "-"
+        "subrace": [
+            "-"
+        ]
     },
     "Dragonborn": {
-        "subrace": "-"
+        "subrace": [
+            "-"
+        ]
     },
     "Gnome": {
         "subrace": [
@@ -31,12 +35,18 @@
         ]
     },
     "Half-Elf": {
-        "subrace": "-"
+        "subrace": [
+            "-"
+        ]
     },
     "Half-Orc": {
-        "subrace": "-"
+        "subrace": [
+            "-"
+        ]
     },
     "Tiefling": {
-        "subrace": "-"
+        "subrace": [
+            "-"
+        ]
     }
 }
