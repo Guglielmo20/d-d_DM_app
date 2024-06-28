@@ -14,7 +14,7 @@
         "strenght": "-1",
         "dexterity": "+1",
         "subgroup": "Proprio Loro",
-        "maxhp": "",
+        "maxhp": "54",
         "name": "Guglielmo",
         "constitution": "+3",
         "maxhp_2": "54"
@@ -98,5 +98,25 @@
         "name": "edward",
         "constitution": "",
         "maxhp_2": ""
+    },
+    "Dresda": {
+        "subrace": "-",
+        "group": "Creature",
+        "race": "Dragonborn",
+        "class0": "Fighter",
+        "subclass": "Battle Master",
+        "intelligence": "+3",
+        "wisdom": "+2",
+        "level": "10",
+        "velocity": "10",
+        "charisma": "+3",
+        "armorerclass": "19",
+        "strenght": "+5",
+        "dexterity": "+4",
+        "subgroup": "",
+        "maxhp": "100",
+        "name": "Dresda",
+        "constitution": "+3",
+        "maxhp_2": "100"
     }
 }
